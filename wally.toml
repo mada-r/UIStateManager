@@ -1,0 +1,12 @@
+[package]
+name = "mada-r/uistatemanager"
+version = "1.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+authors = ["Refactor"]
+exclude = ["**"]
+include = ["default.project.json", "src", "src/**", "wally.toml"]
+private = false
+
+[dependencies]
+signal = "sleitnick/signal@2.0.1"
