@@ -12,6 +12,13 @@ Take a leap of faith and trust in the artistry of Larry's creation. Your UI sorc
 
 ![Real Message!](RealStatement.png)
 
+## Installation
+
+Wally (recommended):
+1. Add uistatemanager as a dependency in your wally.toml file. (e.g. `UIStateManager = "mada-r/uistatemanager@^1"`)
+2. Install uistatemanager with `wally install`.
+
+
 #### Key Features:
 
 - Allows you to define and register UI states, each with its own set of properties and configurations.
