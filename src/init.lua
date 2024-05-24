@@ -7,7 +7,7 @@
 
 --[ Root ]--
 
-local UIStateManager = { Priority = 9999 }
+local UIStateManager = { }
 
 --[ Exports & Types & Defaults ]--
 
@@ -527,10 +527,6 @@ end
 
 --[ Initializers ]--
 
-function UIStateManager:Run()
-	ControlModule = shared(game.Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("PlayerModule"))
-end
-
 function UIStateManager:Init()
 	-- Default State to show hud elements for gameplay
 	self:RegisterState("Gameplay", {
@@ -558,6 +554,9 @@ function UIStateManager:Init()
 	self:RegisterEventHook("StateChange", function(newState, oldState)
 		self.StateChanged:Fire(newState, oldState)
 	end)
+
+	-- Get ControlModule for TouchControlsEnabled
+	ControlModule = shared(game.Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("PlayerModule"))
 end
 
 --[ Return Job ]--
