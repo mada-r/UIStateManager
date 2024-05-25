@@ -1,12 +1,5 @@
 ## UIStateManager 1.0.0
 
-> Created with a healthy dose of passion and a sprinkle of caffeine by Larry, the coding aficionado, during the magical hours of 4 AM on a whimsical Saturday morning. In a caffeine-fueled state of brilliance, Larry embarked on an adventure of code and creativity to bring forth this remarkable creation. <br> <br>
-Enter the extraordinary realm of the `UIStateManager` module! This enchanting tool empowers you to effortlessly manage UI states in your Roblox games. Seamlessly hide and reveal UI components, and even wield the power to transform CoreGui elements with a mere flick of your code wand. <br> <br>
-Embark on an epic journey as you embrace the magic within. Let this wondrous creation be your guide as you unlock the potential of your UI in delightful and imaginative ways. <br> <br>
-Take a leap of faith and trust in the artistry of Larry's creation. Your UI sorcery awaits!
-
-
-<br>
 
 `UIStateManager` is a powerful and easy-to-use Roblox module to handle UI Visibility. It provides functionality for managing different UI states, including hiding and showing UI components and making changes to CoreGui elements.
 
