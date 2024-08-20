@@ -1,6 +1,6 @@
 [package]
 name = "mada-r/uistatemanager"
-version = "1.0.1"
+version = "1.0.3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 authors = ["Refactor"]
