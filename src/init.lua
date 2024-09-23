@@ -148,7 +148,7 @@ local function showComponents(state: string, uiState: {}, props: { any }): ()
 	end
 end
 
-local function hideCoreUI(toHide: {}): ()
+local function hideCoreUI(toHide: { string }): ()
 	if table.find(toHide, "*") then
 		StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 	else
@@ -158,7 +158,7 @@ local function hideCoreUI(toHide: {}): ()
 	end
 end
 
-local function showCoreUI(toShow: {}): ()
+local function showCoreUI(toShow: { string }): ()
 	if table.find(toShow, "*") then
 		StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 	else
@@ -318,7 +318,11 @@ end
     The class should include the methods :Hide() and :Show() to control the visibility of the component.
     Once registered, the UIComponent can be used in the configuration of UIStates to show or hide the component as needed.
 ]]
-function UIStateManager:RegisterComponent(name: string, class: { [any]: any }): ()
+function UIStateManager:RegisterComponent(
+	name: string,
+	class: { [any]: any },
+	defaultProperties: { any }?
+): ()
 	if components[name] then
 		warn(`UIComponent {name} already exists.`)
 		return
@@ -333,6 +337,9 @@ function UIStateManager:RegisterComponent(name: string, class: { [any]: any }): 
 	end
 
 	components[name] = class
+
+	-- Try to show the component if it is registered after the state has been set.
+	self:ShowComponent(name, defaultProperties or {})
 end
 
 --[[
